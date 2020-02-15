@@ -14,5 +14,23 @@ class song
     @@artists.push artist 
     @@genres.push genre 
   end
-  
+  def self.count
+    @@count 
+  end 
+  def self.artists
+    @@artists.uniq 
+  end 
+  def self.genres 
+    @@genres.uniq 
+  end 
+  def self.genre_count
+    new_hash = {}
+    @@genres.each do |g|
+      if new_hash[g]
+        new_hash[g] += 1 
+      else
+        new_hash[g] = 1 
+      end 
+    end 
+    
   
